@@ -4,8 +4,8 @@
 This is where you will be able to start and setup your own server.
 
 ## Requirements
-Node.js v12.22.1
-NPM V6.14.12
+1. Node.js v12.22.1
+2. NPM V6.14.12
 
 ## Installation
 1. Clone/Download this repo
