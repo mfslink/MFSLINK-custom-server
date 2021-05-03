@@ -15,7 +15,9 @@ let ATIS = {}
 
 
 io.on('connection', socket => {
-  
+  setTimeout(function(){
+  socket.emit("chat", {message: "<strong><a style=\"color: #ffd700\">[MFSLINK-CUSTOM-SERVER INFO]</a>:</strong> You are currently chatting in a custom server, which unless the server owner updates the server, will not be maintained by the developers.", channel: "UNICOM_122.800"})
+  }, 3500)
 
   socket.on('chat', async message => {
     let msg;
