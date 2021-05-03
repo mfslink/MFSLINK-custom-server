@@ -3,7 +3,7 @@
 ## Information
 This is where you will be able to start and setup your own server.
 
-## Requirements()t
+## Requirements (tested in)
 1. Node.js v12.22.1
 2. NPM v6.14.12
 
