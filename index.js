@@ -6,9 +6,6 @@ const io = require('socket.io')(server)
 const path = require('path')
 const fetch = require("node-fetch")
 
-app.get("/pingonline", (req, res) => {
-  res.status(200).send("Working!")
-})
 
 
 let ATIS = {}
@@ -16,7 +13,7 @@ let ATIS = {}
 
 io.on('connection', socket => {
   setTimeout(function(){
-  socket.emit("chat", {message: "<strong><a style=\"color: #ffd700\">[MFSLINK-CUSTOM-SERVER INFO]</a>:</strong> You are currently chatting in a custom server, which unless the server owner updates the server, will not be maintained by the developers.", channel: "UNICOM_122.800"})
+  socket.emit("chat", {message: "<strong><a style=\"color: #ffd700\">[MFSLINK-CUSTOM-SERVER INFO]</a>:</strong> You are currently chatting in a custom server, which is NOT maintained by mfslink developers team. Server Owners are responsible of updating to latest server version. No notifications will be sent to server owners when a old version becomes deprecated or when a new version is out.", channel: "UNICOM_122.800"})
   }, 3500)
 
   socket.on('chat', async message => {
